@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validate email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Adresse email invalide.";
+        header('Location: ' . $_SERVER['PHP_SELF'] . '?status=error');
         exit;
     }
 
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Recipients
         $mail->setFrom('services@mosta9balskills.com', 'Mosta9bal skills');
-        $mail->addAddress('mohamad.jadir2018@gmail.com', 'Mosta9bal skills');
+        $mail->addAddress('services@mosta9balskills.com', 'Mosta9bal skills');
         $mail->addReplyTo('services@mosta9balskills.com');
 
         // Content
@@ -51,13 +51,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $mail->send();
 
-        // Redirect back to a thank you page or display success
-        header('Location: thankyou.html');
+        // Redirect to the same page with status=success
+        header('Location: ' . $_SERVER['PHP_SELF'] . '?status=success');
         exit;
     } catch (Exception $e) {
-        echo "Erreur lors de l'envoi du message : {$mail->ErrorInfo}";
+        // Redirect to same page with error status
+        header('Location: ' . $_SERVER['PHP_SELF'] . '?status=error');
+        exit;
     }
-} else {
-    echo "Requête non valide.";
-}
+} 
 ?>

@@ -6,14 +6,14 @@
 <head>
     <meta charset="utf-8" />
     <meta content="ie=edge" http-equiv="x-ua-compatible" />
-    <title>مهارات المستقبل - تعلم مهارات المستقبل</title>
+    <title>Mosta9balSkills - تعلم Mosta9balSkills</title>
     <meta
-        content="مهارات المستقبل هي منصة تدريبية للمنقطعين عن الدراسة، تقدم دورات في برامج المكتب، التصميم، والمهارات الرقمية لمساعدتهم على الاندماج في سوق العمل."
+        content="Mosta9balSkills هي منصة تدريبية للمنقطعين عن الدراسة، تقدم دورات في برامج المكتب، التصميم، والمهارات الرقمية لمساعدتهم على الاندماج في سوق العمل."
         name="description" />
     <meta
         content="التعلم عبر الإنترنت، المهارات الرقمية، برامج المكتب، التصميم الجرافيكي، تطوير الويب، التعلم الإلكتروني، التدريب المهني، الإرشاد، التعليم، المغرب"
         name="keywords" />
-    <meta content="فريق مهارات المستقبل" name="author" />
+    <meta content="فريق Mosta9balSkills" name="author" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="img/online-learning.png" rel="shortcut icon" type="image/x-icon" />
     <!-- Place favicon.ico in the root directory -->
@@ -50,7 +50,7 @@
     <!-- pre loader area end -->
     <!-- Dark/Light area start -->
     <div class="mode_switcher my_switcher">
-        <button class="light align-items-center" id="light--to-dark-button">
+        <button class="light align-items-center" id="light--to-dark-button" dir="ltr">
             <svg class="ionicon dark__mode" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z"
@@ -95,7 +95,7 @@
                                     <a href="tel:+212682846580">اتصل بنا: +212 682 84 65 80</a>
                                 </li>
                                 <li>
-                                    <a href="mailto:Mohamad.jadir2018@gmail.com">راسلنا عبر البريد: Mohamad.jadir2018@gmail.com</a>
+                                    <a href="mailto:services@mosta9balskills.com">راسلنا عبر البريد: services@mosta9balskills.com</a>
                                 </li>
                             </ul>
                         </div>
@@ -158,7 +158,7 @@
                                             <a class="headerarea__has__dropdown" href="#training">برنامج التدريب<i class=""></i></a>
                                         </li>
                                         <li>
-                                            <a class="headerarea__has__dropdown" href="#contact">تواصل معنا<i class=""></i></a>
+                                            <a class="headerarea__has__dropdown" href="#contact-us">تواصل معنا<i class=""></i></a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -242,7 +242,7 @@
                                     <span>التدريب والإدماج المهني</span>
                                 </div>
                                 <div class="herobannerarea__title__heading__2 herobannerarea__title__heading__3">
-                                    <h2>مهارات المستقبل: فرصة ثانية للشباب</h2>
+                                    <h2>Mosta9balSkills: فرصة ثانية للشباب</h2>
                                 </div>
                             </div>
                             <div class="herobannerarea__text herobannerarea__text__2">
@@ -685,7 +685,7 @@
         </div>
         <!-- blog__section__end -->
         <!-- contact__form__start -->
-        <div class="contact__from__wraper sp_bottom_100" dir="ltr">
+        <div class="contact__from__wraper sp_bottom_100" dir="ltr" id="contact-us">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -731,7 +731,30 @@
                                 <div class="col-xl-12" data-aos="fade-up">
                                     <div class="contact__button">
                                         <button class="default__button" name="submit" type="submit" value="submit">أرسل الرسالة</button>
-                                        <p class="form-messege"></p>
+                                        <p id="form-message" class="form-messege"></p>
+
+                                        <script>
+                                        // Check if there is a status in the URL
+                                        const urlParams = new URLSearchParams(window.location.search);
+                                        const status = urlParams.get('status');
+                                        const formMessage = document.getElementById('form-message');
+
+                                        if (status === 'success') {
+                                            formMessage.textContent = "Votre message a été envoyé avec succès !";
+                                            formMessage.style.color = "green"; // Optional: make it green
+                                        } else if (status === 'error') {
+                                            formMessage.textContent = "Erreur lors de l'envoi du message. Veuillez réessayer.";
+                                            formMessage.style.color = "red"; // Optional: make it red
+                                        }
+
+                                        // Optional: remove message after 5 seconds
+                                        if (status) {
+                                            setTimeout(() => {
+                                                formMessage.textContent = "";
+                                            }, 5000);
+                                        }
+                                        </script>
+
                                     </div>
                                 </div>
                             </form>
@@ -767,6 +790,7 @@
                                         <li><a href="#">معلومات عنا</a></li>
                                         <li><a href="#objectives">الأهداف</a></li>
                                         <li><a href="#training">برنامج التدريب</a></li>
+                                        <li><a href="#contact-us">تواصل معنا</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -784,8 +808,8 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="mailto:Mohamad.jadir2018@gmail.com">
-                                                - راسلنا: Mohamad.jadir2018@gmail.com
+                                            <a href="mailto:services@mosta9balskills.com">
+                                                - راسلنا: services@mosta9balskills.com
                                             </a>
                                         </li>
                                     </ul>

@@ -90,8 +90,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:Mohamad.jadir2018@gmail.com">
-                                    - Mail Us: Mohamad.jadir2018@gmail.com</a>
+                                    <a href="mailto:services@mosta9balskills.com">
+                                    - Mail Us: services@mosta9balskills.com</a>
                                 </li>
                             </ul>
                         </div>
@@ -160,7 +160,7 @@
                                         </li>
 
 
-                                    <li><a class="headerarea__has__dropdown" href="">Contact
+                                    <li><a class="headerarea__has__dropdown" href="#contact-us">Contact
                                             <i class=""></i>
                                         </a>
                                     </li>
@@ -228,7 +228,7 @@
                                 </li>
 
                                 
-                                <li class="menu-item-has-children "><a class="headerarea__has__dropdown" href="">Contact
+                                <li class="menu-item-has-children "><a class="headerarea__has__dropdown" href="#contact-us">Contact
                                     <i class=""></i>
                                 </a>
         
@@ -686,13 +686,13 @@
         <!-- blog__section__end -->
 
         <!-- contact__form__start -->
-        <div class="contact__from__wraper sp_bottom_100">
+        <div class="contact__from__wraper sp_bottom_100" id="contact-us">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="contact__form__inner">
                             <div class="contact__form__heading" data-aos="fade-up">
-                                <h3>Contactez-nous</h3>
+                                <h3>Contact-us</h3>
                             </div>
 
 
@@ -701,7 +701,7 @@
 
                                     <div class="col-xl-6" data-aos="fade-up">
                                         <div class="contact__input__wraper">
-                                            <input type="text" name="con_name" id="con_name" placeholder="Votre Nom*">
+                                            <input type="text" name="con_name" id="con_name" placeholder="Your Name*">
                                             <div class="contact__icon">
                                                 <i class="icofont-businessman"></i>
                                             </div>
@@ -710,7 +710,7 @@
 
                                     <div class="col-xl-6" data-aos="fade-up">
                                         <div class="contact__input__wraper">
-                                            <input type="text" name="con_email" id="con_email" placeholder="Votre Email">
+                                            <input type="text" name="con_email" id="con_email" placeholder="Your Email">
                                             <div class="contact__icon">
                                                 <i class="icofont-envelope"></i>
                                             </div>
@@ -728,7 +728,7 @@
                                     </div>
                                     <div class="col-xl-12" data-aos="fade-up">
                                         <div class="contact__input__wraper">
-                                            <textarea name="con_message" id="con_message" cols="30" rows="10" placeholder="Entrez votre message ici"></textarea>
+                                            <textarea name="con_message" id="con_message" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
                                             <div class="contact__icon">
                                                 <i class="icofont-pen-alt-2"></i>
                                             </div>
@@ -737,9 +737,32 @@
                                     <div class="col-xl-12" data-aos="fade-up">
                                         <div class="contact__button">
 
-                                            <button type="submit" value="submit" class="default__button" name="submit">Envoyer le Message</button>
+                                            <button type="submit" value="submit" class="default__button" name="submit">Sent Message</button>
 
-                                            <p class="form-messege"></p>
+                                            <p id="form-message" class="form-messege"></p>
+
+                                            <script>
+                                            // Check if there is a status in the URL
+                                            const urlParams = new URLSearchParams(window.location.search);
+                                            const status = urlParams.get('status');
+                                            const formMessage = document.getElementById('form-message');
+
+                                            if (status === 'success') {
+                                                formMessage.textContent = "Votre message a été envoyé avec succès !";
+                                                formMessage.style.color = "green"; // Optional: make it green
+                                            } else if (status === 'error') {
+                                                formMessage.textContent = "Erreur lors de l'envoi du message. Veuillez réessayer.";
+                                                formMessage.style.color = "red"; // Optional: make it red
+                                            }
+
+                                            // Optional: remove message after 5 seconds
+                                            if (status) {
+                                                setTimeout(() => {
+                                                    formMessage.textContent = "";
+                                                }, 5000);
+                                            }
+                                            </script>
+
 
                                         </div>
                                     </div>
@@ -784,6 +807,9 @@
                                         <li>
                                             <a href="#training">Training Program</a>
                                         </li>
+                                        <li>
+                                            <a href="#contact-us">Contact Us</a>
+                                        </li>
                                         <!-- <li>
                                             <a href="#">Room-Details</a>
                                         </li>
@@ -809,8 +835,8 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="mailto:Mohamad.jadir2018@gmail.com">
-                                            - Mail Us: Mohamad.jadir2018@gmail.com</a>
+                                            <a href="mailto:services@mosta9balskills.com">
+                                            - Mail Us: services@mosta9balskills.com</a>
                                         </li>
                                     </ul>
                                 </div>
